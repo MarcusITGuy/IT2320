@@ -1,6 +1,41 @@
 # IT2320
 Larget Class files
 <html>
+<head>
+	<title>Lab 3 - functions</title> 
+	<script>
+		"use strict";
+		var $ = function(id) { 
+		    return document.getElementById(id); 
+		};
+		function calcFactorial(myNum) {
+			var fact = 1;
+			for(var i=1; i<= myNum;i++){
+				fact = fact * i;
+                  }
+			return fact;
+			// calculate the factorial and return that value
+		}
+		function calculate() { 
+			
+			var myNum = document.getElementById("myNum").value;
+                  var myfactorial = calcFactorial(myNum);
+			document.getElementById("myFactorial").value= myfactorial;
+			// get the number entered into the text box myNum
+			// call the factorial function
+
+			document.getElementById("mySquare").value= myNum *myNum;
+						
+
+            // calculate the square of the number
+            // display those values in the proper place in the HTML 
+		}
+		window.onload = function() {
+		    $("goCalculate").onclick = calculate; 
+			$("myNum").focus();
+		}; 
+	</script>
+</head> 
 <body>
 	<main>
 <h2>Marcus Reid IT2320 Lab3</h2>
